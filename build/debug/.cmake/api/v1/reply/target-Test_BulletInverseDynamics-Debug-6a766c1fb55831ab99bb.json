@@ -1,0 +1,271 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "third_party/bullet/test/InverseDynamics/Test_BulletInverseDynamics"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_EXECUTABLE",
+			"ADD_DEFINITIONS",
+			"INCLUDE_DIRECTORIES"
+		],
+		"files" : 
+		[
+			"third_party/bullet/test/InverseDynamics/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 187,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 79,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 70,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -D_DEBUG -std=gnu++20 -fdiagnostics-color=always"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "BT_USE_EGL"
+				},
+				{
+					"define" : "USE_GRAPHICAL_BENCHMARK"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "_VARIADIC_MAX=10"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/home/rafa/Documents/_PROJECTS/no-name-engine/third_party/bullet/test/InverseDynamics/."
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/rafa/Documents/_PROJECTS/no-name-engine/third_party/bullet/test/InverseDynamics/../../src"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/rafa/Documents/_PROJECTS/no-name-engine/third_party/bullet/test/InverseDynamics/../gtest-1.7.0/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/rafa/Documents/_PROJECTS/no-name-engine/third_party/bullet/test/InverseDynamics/../../Extras/InverseDynamics"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/rafa/Documents/_PROJECTS/no-name-engine/third_party/bullet/test/InverseDynamics/../../examples/ThirdPartyLibs"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 1,
+			"id" : "BulletInverseDynamicsUtils::@24902b59fa96e1cf978e"
+		},
+		{
+			"backtrace" : 1,
+			"id" : "BulletInverseDynamics::@8ddf20f47459fec65f68"
+		},
+		{
+			"backtrace" : 1,
+			"id" : "BulletCollision::@871ce560aaf9d2861a4b"
+		},
+		{
+			"backtrace" : 1,
+			"id" : "BulletDynamics::@845b1f40daedb4204241"
+		},
+		{
+			"backtrace" : 1,
+			"id" : "LinearMath::@745f002c2c8539b43e97"
+		},
+		{
+			"backtrace" : 1,
+			"id" : "Bullet3Common::@b5c3d371cec314ed1d3f"
+		},
+		{
+			"backtrace" : 1,
+			"id" : "gtest::@ed9c0665d5a8c53c10d1"
+		}
+	],
+	"id" : "Test_BulletInverseDynamics::@1eae5fbafe1d940c9dca",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g -D_DEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/Extras/InverseDynamics/libBulletInverseDynamicsUtils.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/BulletInverseDynamics/libBulletInverseDynamics.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/Bullet3Common/libBullet3Common.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/LinearMath/libLinearMath.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/test/gtest-1.7.0/libgtest.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/BulletDynamics/libBulletDynamics.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/BulletCollision/libBulletCollision.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/Extras/InverseDynamics/libBulletInverseDynamicsUtils.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/BulletInverseDynamics/libBulletInverseDynamics.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/Bullet3Common/libBullet3Common.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/LinearMath/libLinearMath.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/test/gtest-1.7.0/libgtest.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/Extras/InverseDynamics/libBulletInverseDynamicsUtils.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/BulletInverseDynamics/libBulletInverseDynamics.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/Bullet3Common/libBullet3Common.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/LinearMath/libLinearMath.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/test/gtest-1.7.0/libgtest.a",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "Test_BulletInverseDynamics",
+	"nameOnDisk" : "Test_BulletInverseDynamics",
+	"paths" : 
+	{
+		"build" : "third_party/bullet/test/InverseDynamics",
+		"source" : "third_party/bullet/test/InverseDynamics"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "third_party/bullet/test/InverseDynamics/test_invdyn_kinematics.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

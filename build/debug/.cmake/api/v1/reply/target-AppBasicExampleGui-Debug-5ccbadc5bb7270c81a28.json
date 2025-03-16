@@ -1,0 +1,305 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "third_party/bullet/examples/BasicDemo/AppBasicExampleGui"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_EXECUTABLE",
+			"ADD_DEFINITIONS",
+			"INCLUDE_DIRECTORIES"
+		],
+		"files" : 
+		[
+			"third_party/bullet/examples/BasicDemo/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 93,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 85,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 83,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 84,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 3,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 41,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 80,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -D_DEBUG -std=gnu++20 -fdiagnostics-color=always"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "B3_USE_STANDALONE_EXAMPLE"
+				},
+				{
+					"define" : "BT_USE_EGL"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "GLEW_DYNAMIC_LOAD_ALL_GLX_FUNCTIONS=1"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "GLEW_INIT_OPENGL11_FUNCTIONS=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "GLEW_STATIC"
+				},
+				{
+					"define" : "USE_GRAPHICAL_BENCHMARK"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "/home/rafa/Documents/_PROJECTS/no-name-engine/third_party/bullet/src"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/home/rafa/Documents/_PROJECTS/no-name-engine/third_party/bullet/btgui"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/home/rafa/Documents/_PROJECTS/no-name-engine/third_party/bullet/examples"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/home/rafa/Documents/_PROJECTS/no-name-engine/third_party/bullet/examples/ThirdPartyLibs/glad"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/rafa/Documents/_PROJECTS/no-name-engine/third_party/bullet/btgui/OpenGLWindow/GlewWindows"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 1,
+			"id" : "OpenGLWindow::@f5b610cb4e1a2c12b229"
+		},
+		{
+			"backtrace" : 1,
+			"id" : "BulletCollision::@871ce560aaf9d2861a4b"
+		},
+		{
+			"backtrace" : 1,
+			"id" : "BulletDynamics::@845b1f40daedb4204241"
+		},
+		{
+			"backtrace" : 1,
+			"id" : "LinearMath::@745f002c2c8539b43e97"
+		},
+		{
+			"backtrace" : 1,
+			"id" : "Bullet3Common::@b5c3d371cec314ed1d3f"
+		}
+	],
+	"id" : "AppBasicExampleGui::@a5ae79492e2da7ef1473",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g -D_DEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/BulletDynamics/libBulletDynamics.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/BulletCollision/libBulletCollision.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/LinearMath/libLinearMath.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/BulletDynamics/libBulletDynamics.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/BulletCollision/libBulletCollision.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/LinearMath/libLinearMath.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/examples/OpenGLWindow/libOpenGLWindow.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "third_party/bullet/src/Bullet3Common/libBullet3Common.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "AppBasicExampleGui",
+	"nameOnDisk" : "AppBasicExampleGui",
+	"paths" : 
+	{
+		"build" : "third_party/bullet/examples/BasicDemo",
+		"source" : "third_party/bullet/examples/BasicDemo"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "third_party/bullet/examples/BasicDemo/BasicExample.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "third_party/bullet/build3/bullet.rc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "third_party/bullet/examples/StandaloneMain/main_opengl_single_example.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "third_party/bullet/examples/ExampleBrowser/OpenGLGuiHelper.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "third_party/bullet/examples/ExampleBrowser/GL_ShapeDrawer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "third_party/bullet/examples/ExampleBrowser/CollisionShape2TriangleMesh.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "third_party/bullet/examples/Utils/b3Clock.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}
