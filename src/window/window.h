@@ -1,7 +1,7 @@
 #pragma once
-
+#include "../events/event_manager.h"
 
 class Window {
 	public:
-	virtual void Initialize() = 0;
+	virtual void initialize() = 0;
 };

@@ -1,4 +1,5 @@
 #include "physics_world.h"
+#include "../engine/debug/debug_helper.h"
 
 PhysicsWorld::PhysicsWorld() {
 	collision_configuration_ = new btDefaultCollisionConfiguration();
@@ -15,6 +16,8 @@ PhysicsWorld::~PhysicsWorld() {
 	delete dispatcher_;
 	delete collision_configuration_;
 	std::cout << "[Physics] Physics world cleared!" << std::endl;
+	DEBUG(" [Engine] Engine cleared!");
+	DEBUG(" [Engine] Engine finished succefully :)");
 }
 
 btRigidBody *PhysicsWorld::AddRigidBody(const RigidBodyConfiguration &rbInfo) {

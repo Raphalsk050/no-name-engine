@@ -2,7 +2,7 @@
 #include "src/engine/engine.h"
 
 int main() {
-	Engine* engine = new Engine();
+	auto engine = new Engine();
 	engine->Initialize(nullptr);
 
 	delete engine;
