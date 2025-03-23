@@ -1,38 +1,27 @@
-#define GLFW_INCLUDE_VULKAN
+#ifndef WINDOW_GLFW_H
+#define WINDOW_GLFW_H
+
 #include <GLFW/glfw3.h>
-#include <vulkan/vulkan.h>
-#include <vector>
-#include <iostream>
-#include "window.h"
 
-class GLFWWindow : public Window {
-	struct Vertex {
-		float pos[2]; // Posição 2D (x, y)
-	};
+class WindowGLFW {
+ public:
+  WindowGLFW(int width, int height, const char* title);
+  ~WindowGLFW();
 
-	// Função auxiliar para verificar erros Vulkan
-	void checkResult(VkResult result, const char *msg) {
-		if (result != VK_SUCCESS) {
-			std::cerr << "Erro Vulkan: " << msg << " (" << result << ")\n";
-			exit(1);
-		}
-	}
+  bool initialize();
+  void run();
+  bool shouldClose() const;
+  void swapBuffers();
+  void pollEvents();
 
-public:
-	GLFWWindow();
+ private:
+  GLFWwindow* window_;
+  void cleanup();
+  int width_;
+  int height_;
+  const char* title_;
 
-	~GLFWWindow();
-
-	void run();
-
-private:
-	void initialize() override;
-
-	void cleanup() const;
-
-	GLFWwindow *window_instance_;
-	VkInstance vulkan_instance_;
-	VkApplicationInfo appInfo_ = {};
-	VkInstanceCreateInfo create_info_ = {};
-	VkSurfaceKHR vulkan_surface_;
+  void setupCallbacks();
 };
+
+#endif  // WINDOW_GLFW_H

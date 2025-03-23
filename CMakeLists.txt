@@ -3,7 +3,7 @@ project(no_name_engine)
 
 # needed packages
 find_package(glfw3 3.2 REQUIRED)
-find_package(Vulkan REQUIRED)
+find_package(GLEW REQUIRED)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -23,9 +23,28 @@ add_executable(no_name_engine main.cpp
         src/engine/engine.h
         src/window/window_glfw.cpp
         src/window/window_glfw.h
-        src/window/window.h
         src/engine/debug/debug_helper.h
         src/events/event_manager.h
+        src/engine/base/component.cpp
+        src/engine/base/component.h
+        src/engine/base/scene.cpp
+        src/engine/base/scene.h
+        src/engine/base/entity.cpp
+        src/engine/base/entity.h
+        src/engine/base/managers/entity_manager.cpp
+        src/engine/base/managers/entity_manager.h
+        src/engine/base/managers/component_manager.cpp
+        src/engine/base/managers/component_manager.h
+        src/engine/base/managers/camera_manager.cpp
+        src/engine/base/managers/camera_manager.h
+        src/engine/base/systems/component_system.cpp
+        src/engine/base/systems/component_system.h
+        src/engine/base/systems/entity_system.cpp
+        src/engine/base/systems/entity_system.h
+        src/engine/base/systems/camera_system.cpp
+        src/engine/base/systems/camera_system.h
+        src/engine/base/entity_handle.cpp
+        src/engine/base/entity_handle.h
 )
 
 # sdl lib
@@ -37,4 +56,4 @@ add_subdirectory(third_party/bullet)
 # bullet lib includes
 target_include_directories(no_name_engine PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/third_party/bullet/src)
 
-target_link_libraries(no_name_engine PRIVATE BulletDynamics BulletCollision LinearMath glfw Vulkan::Vulkan)
+target_link_libraries(no_name_engine PRIVATE BulletDynamics BulletCollision LinearMath glfw GLEW::GLEW GL)

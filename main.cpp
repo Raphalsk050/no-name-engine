@@ -3,7 +3,7 @@
 
 int main() {
 	auto engine = new Engine();
-	engine->Initialize(nullptr);
+	engine->Initialize();
 
 	delete engine;
 	return 0;
