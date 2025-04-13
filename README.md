@@ -1,5 +1,7 @@
 # no-name-engine
 
+---
+
 ## How to clone the project
 
 This project has some third_party lib dependencies like:
@@ -15,24 +17,18 @@ Note: if you already have cloned the project, to initialize the gitmodules use:
 
 `git submodule update --init --recursive`
 
+---
+
 ## How to build
 
-make a build folder
+To build the project you must give permission to sh script \
+### **On unix based systems**
+`chmod +x build_project.sh`
 
-`mkdir build`
+### This script have three possibilities:
 
-Go to this folder
+- build - build the project inside the build directory
+- clean - remove all the build directory
+- run - run the binary inside the build/bin directory
 
-`cd build`
-
-run
-
-`cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_POLICY_VERSION_MINIMUM=3.5`
-
-after completed, run
-
-`make`
-
-and then, run
-
-`./no-name-engine`
+---
