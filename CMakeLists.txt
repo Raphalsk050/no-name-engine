@@ -30,10 +30,10 @@ add_executable(no_name_engine main.cpp
         src/events/event_manager.h
         src/engine/base/component.cpp
         src/engine/base/component.h
-        src/engine/base/scene.cpp
-        src/engine/base/scene.h
-        src/engine/base/entity.cpp
-        src/engine/base/entity.h
+        # src/engine/base/scene.cpp
+        # src/engine/base/scene.h
+        # src/engine/base/entity.cpp
+        # src/engine/base/entity.h
         # src/engine/base/managers/entity_manager.cpp
         # src/engine/base/managers/entity_manager.h
         src/engine/base/managers/component_manager.cpp
@@ -56,4 +56,4 @@ add_subdirectory(${BULLET_PATH})
 # bullet lib includes
 target_include_directories(no_name_engine PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/${BULLET_PATH}/src)
 
-target_link_libraries(no_name_engine PRIVATE BulletDynamics BulletCollision LinearMath glfw GLEW::GLEW GL)
+target_link_libraries(no_name_engine PRIVATE BulletDynamics BulletCollision LinearMath glfw GLEW::GLEW "-framework OpenGL")
