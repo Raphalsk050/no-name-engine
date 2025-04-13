@@ -16,14 +16,14 @@ BINARY="./$BUILD_DIRECTORY/$PROJECT_NAME"
 # Functions
 build() {
     echo -e "${YELLOW}Running CMake and generating files in $BUILD_DIRECTORY...${R}"
-    sleep 3
+    sleep 1
     cmake -B $BUILD_DIRECTORY $ECC $PMV
 
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}CMake finished successfully.${R}"
-        sleep 2
+        sleep 1
         echo -e "${YELLOW}Running make to build the project...${R}"
-        sleep 3
+        sleep 1
         cd $BUILD_DIRECTORY && make
     else
         echo -e "${RED}Error while running CMake.${R}"
@@ -33,7 +33,7 @@ build() {
 
 clean() {
     echo -e "${YELLOW}Cleaning $BUILD_DIRECTORY directory...${R}"
-    sleep 2
+    sleep 1
     rm -rf $BUILD_DIRECTORY
     echo -e "${GREEN}Build directory removed.${R}"
 }
