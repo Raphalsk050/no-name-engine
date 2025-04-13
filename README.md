@@ -8,6 +8,7 @@ This project has some third_party lib dependencies like:
 - bullet-physics sdk
 - glfw
 - glew
+- OpenGL
 
 you must clone the project and initialize the .gitmodules
 
@@ -21,7 +22,7 @@ Note: if you already have cloned the project, to initialize the gitmodules use:
 
 ## How to build
 
-To build the project you must give permission to sh script \
+To build the project you must give permission to sh script
 ### **On unix based systems**
 `chmod +x build_project.sh`
 
