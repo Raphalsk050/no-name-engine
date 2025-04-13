@@ -1,5 +1,4 @@
 #include "engine.h"
-
 #include "debug/debug_helper.h"
 
 EventManager* EventManager::instance = nullptr;
@@ -8,6 +7,7 @@ void Engine::Initialize() {
   window_ = new WindowGLFW(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
   physics_world_ = new PhysicsWorld();
   engine_state_ = new RunningState();
+  physics_world_->CreatePhysicsWorld();
   window_->initialize();
   DEBUG(" [Engine] Engine Initialized!");
   Run();
@@ -29,7 +29,10 @@ void Engine::Run() const {
   if (window_ == nullptr) return;
   DEBUG(" [Engine] Engine changed it's state to: RUNNING");
 
-  window_->run();
+  while (!window_->shouldClose()) {
+      physics_world_->stepSimulation(1);
+      window_->update();
+  }
 }
 
 void Engine::Pause() const {

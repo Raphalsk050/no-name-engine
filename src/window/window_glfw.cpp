@@ -36,15 +36,16 @@ bool WindowGLFW::initialize() {
   return true;
 }
 
-void WindowGLFW::run() {
-  while (!shouldClose()) {
+void WindowGLFW::update() {
+  if (!shouldClose()) {
     glClear(GL_COLOR_BUFFER_BIT);
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 
     swapBuffers();
     pollEvents();
   }
-  cleanup();
+  else
+    cleanup();
 }
 
 bool WindowGLFW::shouldClose() const { return glfwWindowShouldClose(window_); }

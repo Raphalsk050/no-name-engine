@@ -1,6 +1,7 @@
 #include "physics_world.h"
 
 #include "../engine/debug/debug_helper.h"
+#include "LinearMath/btScalar.h"
 
 PhysicsWorld::PhysicsWorld() {
   collision_configuration_ = new btDefaultCollisionConfiguration();
@@ -16,14 +17,25 @@ PhysicsWorld::~PhysicsWorld() {
   delete overlapping_pair_cache_;
   delete dispatcher_;
   delete collision_configuration_;
-  std::cout << "[Physics] Physics world cleared!" << std::endl;
-  DEBUG(" [Engine] Engine cleared!");
-  DEBUG(" [Engine] Engine finished succefully :)");
+  DEBUG(" [Physics] Physics world cleared! ---------------------------");
+}
+
+void PhysicsWorld::stepSimulation(btScalar steps) {
+  if (!dynamics_world_) {
+    DEBUG(
+        " [Physics] No dynamic world created to simulation! "
+        "---------------------------");
+    return;
+  }
+
+  dynamics_world_->stepSimulation(steps);
+  passed_steps_+=steps;
+  DEBUG(" [Physics] Update steps: ", passed_steps_);
 }
 
 btRigidBody *PhysicsWorld::AddRigidBody(const RigidBodyConfiguration &rbInfo) {
   if (!dynamics_world_) {
-    std::cout << "No dynamic world created! ---------------------------";
+    DEBUG(" [Physics] No dynamic world created! ---------------------------");
     return nullptr;
   }
 
@@ -62,5 +74,5 @@ void PhysicsWorld::DestroyAllRigidBodies() {
   }
 
   rigid_bodies_.clear();
-  std::cout << "[Physics] All rigid bodies cleared!" << std::endl;
+  DEBUG(" [Physics] All rigidbodies cleared! ---------------------------");
 }

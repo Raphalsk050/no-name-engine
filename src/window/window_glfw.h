@@ -9,7 +9,7 @@ class WindowGLFW {
   ~WindowGLFW();
 
   bool initialize();
-  void run();
+  void update();
   bool shouldClose() const;
   void swapBuffers();
   void pollEvents();

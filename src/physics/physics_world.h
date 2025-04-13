@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include "LinearMath/btScalar.h"
 
 #define DEFAULT_GRAVITY_FORCE (-9.81)
 
@@ -18,6 +19,8 @@ class PhysicsWorld {
 
   void ChangeWorldGravity(btVector3 gravity) const;
 
+  void stepSimulation(btScalar steps);
+
   RigidBodyConfiguration CreateRigidBodyConstructionInfo(
       btVector3 origin, btScalar mass, btVector3 local_inertia,
       btCollisionShape *shape);
@@ -32,4 +35,5 @@ class PhysicsWorld {
   btSequentialImpulseConstraintSolver *solver_;
   std::vector<btRigidBody *> rigid_bodies_;
   void DestroyAllRigidBodies();
+  int32_t passed_steps_ = 0;
 };
