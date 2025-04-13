@@ -36,6 +36,8 @@ add_executable(no_name_engine main.cpp
         # src/engine/base/entity.h
         # src/engine/base/managers/entity_manager.cpp
         # src/engine/base/managers/entity_manager.h
+        src/engine/base/components/transform.cpp
+        src/engine/base/components/transform.h
         src/engine/base/managers/component_manager.cpp
         src/engine/base/managers/component_manager.h
         src/engine/base/managers/camera_manager.cpp
