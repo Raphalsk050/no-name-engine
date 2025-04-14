@@ -39,10 +39,10 @@ clean() {
 }
 
 run() {
-    if [ ! -f "$BINARY" ]; then
-        echo -e "${RED}Binary not found. Please build the project first.${R}"
-        exit 1
-    fi
+    local CURRENT_DIR
+    CURRENT_DIR=$(pwd)
+    build
+    cd "$CURRENT_DIR"
     echo -e "${YELLOW}Running the application...${R}"
     $BINARY
 }
