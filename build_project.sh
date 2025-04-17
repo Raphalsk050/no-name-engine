@@ -7,24 +7,26 @@ YELLOW="\033[0;33m"
 R="\033[0m"
 
 # Configurations
-PROJECT_NAME=no_name_engine
+PROJECT_NAME=hello_world
+BUILD_DIRECTORY=build
+BINARY="./$BUILD_DIRECTORY/samples/$PROJECT_NAME/$PROJECT_NAME"
+
+# Flags
 ECC=-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 PMV=-DCMAKE_POLICY_VERSION_MINIMUM=3.5
-BUILD_DIRECTORY=build
-BINARY="./$BUILD_DIRECTORY/$PROJECT_NAME"
 
 # Functions
 build() {
     echo -e "${YELLOW}Running CMake and generating files in $BUILD_DIRECTORY...${R}"
     sleep 1
-    cmake -B $BUILD_DIRECTORY $ECC $PMV
+    cmake -B $BUILD_DIRECTORY -S . $ECC $PMV
 
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}CMake finished successfully.${R}"
         sleep 1
         echo -e "${YELLOW}Running make to build the project...${R}"
         sleep 1
-        cd $BUILD_DIRECTORY && make
+        cmake --build $BUILD_DIRECTORY
     else
         echo -e "${RED}Error while running CMake.${R}"
         exit 1
@@ -39,11 +41,8 @@ clean() {
 }
 
 run() {
-    local CURRENT_DIR
-    CURRENT_DIR=$(pwd)
     build
-    cd "$CURRENT_DIR"
-    echo -e "${YELLOW}Running the application...${R}"
+    echo -e "${YELLOW}Running the application ($PROJECT_NAME)...${R}"
     $BINARY
 }
 
@@ -52,7 +51,7 @@ help() {
     echo
     echo "  build   Build the project using CMake and Make"
     echo "  clean   Remove the build directory"
-    echo "  run     Run the compiled binary"
+    echo "  run     Build and run the selected sample"
     echo "  help    Show this help message"
 }
 
