@@ -1,5 +1,6 @@
 #include "window_system.h"
-#include "../../debug/debug_helper.h"
+
+#include "../engine/debug/debug_helper.h"
 
 WindowSystem::WindowSystem() {}
 

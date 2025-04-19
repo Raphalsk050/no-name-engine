@@ -2,7 +2,7 @@
 #include <unordered_map>
 #include <vector>
 
-#include "../entity.h"
+#include "entity.h"
 
 using namespace std;
 class EntityHandle;

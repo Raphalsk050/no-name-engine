@@ -2,6 +2,8 @@
 
 int main() {
   auto engine = new Engine();
+  engine->RegisterSystem<EntitySystem>();
+  engine->RegisterSystem<ComponentSystem>();
   engine->RegisterSystem<WindowSystem>();
   engine->RegisterSystem<PhysicsSystem>();
   engine->RegisterSystem<InputSystem>();

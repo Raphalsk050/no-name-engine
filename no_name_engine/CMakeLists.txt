@@ -21,54 +21,57 @@ set(BUILD_EXTRAS OFF CACHE BOOL "Disable Extras")
 set(INSTALL_LIBS ON CACHE BOOL "Install Bullet libraries")
 
 add_library(no_name_engine STATIC
-        src/physics/physics_world.cpp
-        src/physics/physics_world.h
-        src/engine/engine.cpp
-        src/engine/engine.h
-        src/window/window_glfw.cpp
-        src/window/window_glfw.h
-        src/engine/debug/debug_helper.h
-        src/events/event_manager.h
-        src/events/event_manager.cpp
-        src/engine/base/component.cpp
-        src/engine/base/component.h
-        src/scene/scene.h
-        src/scene/scene.cpp
-        src/engine/base/entity.cpp
-        src/engine/base/entity.h
-        src/engine/base/managers/entity_manager.cpp
-        src/engine/base/managers/entity_manager.h
         src/engine/base/components/transform.cpp
         src/engine/base/components/transform.h
-        src/engine/base/managers/component_manager.cpp
-        src/engine/base/managers/component_manager.h
         src/engine/base/managers/camera_manager.cpp
         src/engine/base/managers/camera_manager.h
-        # src/engine/base/systems/component_system.cpp
-        # src/engine/base/systems/component_system.h
-        # src/engine/base/systems/entity_system.cpp
-        # src/engine/base/systems/entity_system.h
-        # src/engine/base/systems/camera_system.cpp
-        # src/engine/base/systems/camera_system.h
-        src/engine/base/entity_handle.cpp
-        src/engine/base/entity_handle.h
-        src/engine/base/managers/entity_manager.cpp
-        src/engine/base/managers/entity_manager.h
-        src/engine/base/component_handle.cpp
-        src/engine/base/component_handle.h
-        src/engine/base/types.h
-        src/physics/physics_manager.cpp
-        src/physics/physics_manager.h
-        src/engine/base/systems/engine_system.cpp
-        src/engine/base/systems/engine_system.h
-        src/engine/base/systems/window_system.cpp
-        src/engine/base/systems/window_system.h
-        src/physics/physics_system.cpp
-        src/physics/physics_system.h
-        src/input/input_system.cpp
-        src/input/input_system.h
+        # events ------------------------------
+        src/events/event_manager.h
+        src/events/event_manager.cpp
+        # scene -------------------------------
+        src/scene/scene.h
+        src/scene/scene.cpp
+        # window ------------------------------
+        src/window/window_glfw.cpp
+        src/window/window_glfw.h
+        src/window/window_system.h
+        src/window/window_system.cpp
+        # physics -----------------------------
         src/physics/rigidbody_component.cpp
         src/physics/rigidbody_component.h
+        src/physics/physics_system.cpp
+        src/physics/physics_system.h
+        src/physics/physics_world.cpp
+        src/physics/physics_world.h
+        src/physics/physics_manager.cpp
+        src/physics/physics_manager.h
+        # entity ------------------------------
+        src/entity/entity_system.cpp
+        src/entity/entity_system.h
+        src/entity/entity.h
+        src/entity/entity.cpp
+        src/entity/entity_handle.h
+        src/entity/entity_handle.cpp
+        src/entity/entity_manager.h
+        src/entity/entity_manager.cpp
+        # component ---------------------------
+        src/component/component_system.cpp
+        src/component/component_system.h
+        src/component/component.h
+        src/component/component.cpp
+        src/component/component_handle.h
+        src/component/component_handle.cpp
+        # debug -------------------------------
+        src/engine/debug/debug_helper.h
+        # input -------------------------------
+        src/input/input_system.cpp
+        src/input/input_system.h
+        # engine ------------------------------
+        src/engine/base/types.h
+        src/engine/base/systems/engine_system.cpp
+        src/engine/base/systems/engine_system.h
+        src/engine/engine.cpp
+        src/engine/engine.h
         no_name_engine.h
 )
 

@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-#include "../component.h"
+#include "../../../component/component.h"
 
 /* This component is always attached to a new node. This component
  * is used to represent a node in the scene graph and have all the

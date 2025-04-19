@@ -1,7 +1,7 @@
 #pragma once
 #include <memory>
 
-#include "component_handle.h"
+#include "../component/component_handle.h"
 #include "entity.h"
 
 using namespace std;

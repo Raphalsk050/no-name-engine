@@ -13,7 +13,6 @@ class PhysicsSystem : public EngineSystem {
 
   PhysicsManager* GetPhysicsManager() const { return physics_manager_; }
 
-  // Sistema de física específico
   btRigidBody* AddRigidBody(btVector3 origin, float mass,
                             btCollisionShape* shape);
   void SetGravity(const btVector3& gravity);

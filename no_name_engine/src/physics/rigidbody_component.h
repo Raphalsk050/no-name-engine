@@ -1,8 +1,10 @@
 // src/physics/rigidbody_component.h
 #pragma once
-#include "../engine/base/component.h"
 #include <btBulletDynamicsCommon.h>
+
 #include <memory>
+
+#include "../component/component.h"
 
 class RigidBodyComponent : public Component {
 /*public:

@@ -1,9 +1,9 @@
 #pragma once
 #include <memory>
 
-#include "../engine/base/component_handle.h"
-#include "../engine/base/entity_handle.h"
-#include "../engine/base/managers/entity_manager.h"
+#include "../component/component_handle.h"
+#include "../entity/entity_handle.h"
+#include "../entity/entity_manager.h"
 #include "scene_attachment_manager.h"
 
 class Scene {

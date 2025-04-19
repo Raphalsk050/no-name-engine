@@ -1,7 +1,7 @@
 // component_handle.h
 
 #pragma once
-#include "managers/component_manager.h"
+#include "../engine/base/managers/component_manager.h"
 
 template <typename T>
 class ComponentHandle {

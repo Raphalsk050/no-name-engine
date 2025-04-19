@@ -1,6 +1,6 @@
 #pragma once
-#include "../../../window/window_glfw.h"
-#include "engine_system.h"
+#include "../engine/base/systems/engine_system.h"
+#include "window_glfw.h"
 
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600

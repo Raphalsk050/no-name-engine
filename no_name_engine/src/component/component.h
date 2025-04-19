@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
 
-#include "types.h"
+#include "../engine/base/types.h"
 
 using ComponentID = uint32_t;
 class Component {

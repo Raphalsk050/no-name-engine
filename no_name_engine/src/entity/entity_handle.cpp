@@ -1,6 +1,6 @@
 #include "entity_handle.h"
 
-#include "../../scene/scene.h"
+#include "../scene/scene.h"
 
 template <typename T, typename... Args>
 ComponentHandle<T> EntityHandle::AddComponent(Args&&... args) {
