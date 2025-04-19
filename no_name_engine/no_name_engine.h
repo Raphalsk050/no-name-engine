@@ -1,0 +1,5 @@
+#include "src/engine/engine.h"
+#include "src/input/input_system.h"
+#include "src/engine/base/systems/window_system.h"
+#include "src/physics/physics_system.h"
+#include "src/engine/debug/debug_helper.h"

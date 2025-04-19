@@ -1,5 +1,5 @@
 #include "node_component.h"
 
-std::string NodeComponent::GetName() {
+std::string EntityComponent::GetName() {
 	return {name_};
 }

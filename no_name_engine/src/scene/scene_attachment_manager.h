@@ -1,7 +1,7 @@
 #pragma once
-#include "../component_handle.h"
-#include "../entity.h"
-#include "component_manager.h"
+#include "../engine/base/component_handle.h"
+#include "../engine/base/entity.h"
+#include "../engine/base/managers/component_manager.h"
 
 class SceneAttachmentManager {
  public:

@@ -23,12 +23,12 @@ PhysicsManager::~PhysicsManager() {
   rigid_bodies_.clear();
 
   delete physics_world_;
-  DEBUG(" [PhysicsManager] Physics Manager destroyed!");
+  DebugHelper::NLog_info(" [PhysicsManager] Physics Manager destroyed!");
 }
 
 void PhysicsManager::Initialize() {
   physics_world_->CreatePhysicsWorld();
-  DEBUG(" [PhysicsManager] Physics Manager Initialized!");
+  DebugHelper::NLog_info(" [PhysicsManager] Physics Manager Initialized!");
 }
 
 

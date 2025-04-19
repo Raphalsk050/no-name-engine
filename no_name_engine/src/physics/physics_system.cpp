@@ -8,7 +8,7 @@ PhysicsSystem::~PhysicsSystem() {}
 void PhysicsSystem::Initialize() {
     physics_manager_ = PhysicsManager::GetInstance();
     physics_manager_->Initialize();
-    DEBUG(" [PhysicsSystem] Physics system initialized");
+    DebugHelper::NLog_info(" [PhysicsSystem] Physics system initialized");
 }
 
 void PhysicsSystem::Update(float deltaTime) {
@@ -17,7 +17,7 @@ void PhysicsSystem::Update(float deltaTime) {
 
 void PhysicsSystem::Shutdown() {
     // O PhysicsManager é um singleton, então não deletamos aqui
-    DEBUG(" [PhysicsSystem] Physics system shutdown");
+    DebugHelper::NLog_info(" [PhysicsSystem] Physics system shutdown");
 }
 
 btRigidBody* PhysicsSystem::AddRigidBody(btVector3 origin, float mass, btCollisionShape* shape) {

@@ -6,15 +6,14 @@ InputSystem::InputSystem() {}
 InputSystem::~InputSystem() {}
 
 void InputSystem::Initialize() {
-    DEBUG(" [InputSystem] Input system initialized");
+    DebugHelper::NLog_info(" [InputSystem] Input system initialized");
 }
 
 void InputSystem::Update(float deltaTime) {
-    // Atualizaria o estado dos inputs aqui
 }
 
 void InputSystem::Shutdown() {
-    DEBUG(" [InputSystem] Input system shutdown");
+    DebugHelper::NLog_info(" [InputSystem] Input system shutdown");
 }
 
 bool InputSystem::IsKeyPressed(int keyCode) const {

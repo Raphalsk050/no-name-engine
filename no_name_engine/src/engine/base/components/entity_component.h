@@ -7,7 +7,7 @@
  * is used to represent a node in the scene graph and have all the
  * necessary information to handle the node's properties and behavior.
  */
-class NodeComponent : public Component {
+class EntityComponent : public Component {
  public:
   std::string GetName();
 

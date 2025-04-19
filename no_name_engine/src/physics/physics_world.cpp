@@ -17,12 +17,12 @@ PhysicsWorld::~PhysicsWorld() {
   delete overlapping_pair_cache_;
   delete dispatcher_;
   delete collision_configuration_;
-  DEBUG(" [Physics] Physics world cleared! ---------------------------");
+  DebugHelper::NLog_info(" [Physics] Physics world cleared! ---------------------------");
 }
 
 void PhysicsWorld::stepSimulation(btScalar steps) {
   if (!dynamics_world_) {
-    DEBUG(
+    DebugHelper::NLog_info(
         " [Physics] No dynamic world created to simulation! "
         "---------------------------");
     return;
@@ -35,7 +35,7 @@ void PhysicsWorld::stepSimulation(btScalar steps) {
 
 btRigidBody *PhysicsWorld::AddRigidBody(const RigidBodyConfiguration &rbInfo) {
   if (!dynamics_world_) {
-    DEBUG(" [Physics] No dynamic world created! ---------------------------");
+    DebugHelper::NLog_error(" [Physics] No dynamic world created! ---------------------------");
     return nullptr;
   }
 
@@ -82,5 +82,5 @@ void PhysicsWorld::DestroyAllRigidBodies() {
   }
 
   rigid_bodies_.clear();
-  DEBUG(" [Physics] All rigidbodies cleared! ---------------------------");
+  DebugHelper::NLog_info(" [Physics] All rigidbodies cleared! ---------------------------");
 }

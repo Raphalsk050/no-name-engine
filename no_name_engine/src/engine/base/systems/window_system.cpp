@@ -8,7 +8,7 @@ WindowSystem::~WindowSystem() {}
 void WindowSystem::Initialize() {
     window_ = new WindowGLFW(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
     window_->initialize();
-    DEBUG(" [WindowSystem] Window system initialized");
+    DebugHelper::NLog_info(" [WindowSystem] Window system initialized");
 }
 
 void WindowSystem::Update(float deltaTime) {
@@ -18,7 +18,7 @@ void WindowSystem::Update(float deltaTime) {
 void WindowSystem::Shutdown() {
     delete window_;
     window_ = nullptr;
-    DEBUG(" [WindowSystem] Window system shutdown");
+    DebugHelper::NLog_info(" [WindowSystem] Window system shutdown");
 }
 
 bool WindowSystem::ShouldClose() const {

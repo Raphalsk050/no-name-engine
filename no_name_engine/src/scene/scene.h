@@ -1,10 +1,10 @@
 #pragma once
 #include <memory>
 
-#include "component_handle.h"
-#include "entity_handle.h"
-#include "managers/entity_manager.h"
-#include "managers/scene_attachment_manager.h"
+#include "../engine/base/component_handle.h"
+#include "../engine/base/entity_handle.h"
+#include "../engine/base/managers/entity_manager.h"
+#include "scene_attachment_manager.h"
 
 class Scene {
  public:

@@ -1,17 +1,20 @@
 #include <iostream>
 #include <sstream>
 #include <unordered_map>
+#include <spdlog/spdlog.h>
 
-template <typename T>
-std::string ToString(const T &value) {
-  std::ostringstream oss;
-  oss << value;
-  return oss.str();
-}
 
-template <typename... Args>
-void DEBUG(Args &&...args) {
-  std::ostringstream oss;
-  ((oss << ToString(std::forward<Args>(args))), ...);
-  std::cout << "[DEBUG] " << oss.str() << std::endl;
-}
+static class DebugHelper {
+public:
+  static void NLog_info(const std::string& message) {
+    spdlog::info(message);
+  }
+
+  static void NLog_error(const std::string& message) {
+    spdlog::error(message);
+  }
+
+  static void NLog_warn(const std::string& message) {
+    spdlog::warn(message);
+  }
+};

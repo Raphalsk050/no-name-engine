@@ -8,6 +8,7 @@ find_package(GLEW REQUIRED)
 
 # bullet path
 set(BULLET_PATH third_party/bullet)
+set(SPDLOG_PATH third_party/spdlog)
 set(CMAKE_CXX_STANDARD 20)
 
 # rules to compile only the necessary libs from bullet
@@ -31,8 +32,8 @@ add_library(no_name_engine STATIC
         src/events/event_manager.cpp
         src/engine/base/component.cpp
         src/engine/base/component.h
-        src/engine/base/scene.cpp
-        src/engine/base/scene.h
+        src/scene/scene.h
+        src/scene/scene.cpp
         src/engine/base/entity.cpp
         src/engine/base/entity.h
         src/engine/base/managers/entity_manager.cpp
@@ -68,12 +69,14 @@ add_library(no_name_engine STATIC
         src/input/input_system.h
         src/physics/rigidbody_component.cpp
         src/physics/rigidbody_component.h
+        no_name_engine.h
 )
 
 # bullet directory
 add_subdirectory(${BULLET_PATH})
+add_subdirectory(${SPDLOG_PATH})
 
 # bullet lib includes
 target_include_directories(no_name_engine PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/${BULLET_PATH}/src)
 
-target_link_libraries(no_name_engine PUBLIC BulletDynamics BulletCollision LinearMath glfw GLEW::GLEW "-framework OpenGL")
+target_link_libraries(no_name_engine PUBLIC BulletDynamics BulletCollision LinearMath spdlog::spdlog glfw GLEW::GLEW "-framework OpenGL")

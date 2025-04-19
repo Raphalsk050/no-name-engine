@@ -17,7 +17,7 @@ WindowGLFW::~WindowGLFW() {
 
 bool WindowGLFW::initialize() {
   if (!glfwInit()) {
-    DEBUG(" [WINDOW] Fail to initialize GLFW");
+    DebugHelper::NLog_error(" [WINDOW] Fail to initialize GLFW");
     return false;
   }
 
@@ -27,7 +27,7 @@ bool WindowGLFW::initialize() {
 
   window_ = glfwCreateWindow(width_, height_, title_, nullptr, nullptr);
   if (!window_) {
-    DEBUG(" [WINDOW] Fail to create GLFW window");
+    DebugHelper::NLog_error(" [WINDOW] Fail to create GLFW window");
     glfwTerminate();
     return false;
   }
@@ -39,7 +39,7 @@ bool WindowGLFW::initialize() {
 
 void WindowGLFW::update() {
   if (!shouldClose()) {
-    DEBUG(" [WINDOW] Window updated");
+    //DebugHelper::NLog_info(" [WINDOW] Window updated");
     glClear(GL_COLOR_BUFFER_BIT);
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 
@@ -58,7 +58,7 @@ void WindowGLFW::swapBuffers() { glfwSwapBuffers(window_); }
 
 void WindowGLFW::pollEvents() { glfwPollEvents(); }
 
-void WindowGLFW::cleanup() { DEBUG(" [WINDOW] Window cleanedup"); }
+void WindowGLFW::cleanup() { DebugHelper::NLog_info(" [WINDOW] Window cleanedup"); }
 
 void WindowGLFW::setupCallbacks() {
   glfwSetKeyCallback(window_, [](GLFWwindow *window, int key, int scancode,
